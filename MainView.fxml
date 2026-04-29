@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.MainController"
+            prefWidth="1000" prefHeight="680">
+
+    <top>
+        <VBox>
+            <fx:include source="MenuBar.fxml"/>
+            <HBox style="-fx-background-color:#1A237E; -fx-padding:15px;"
+                  alignment="CENTER_LEFT" spacing="20">
+                <Label text="Task Management System"
+                       style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="Total: " style="-fx-text-fill:#C5CAE9;"/>
+                <Label fx:id="taskCountLabel" text="0"
+                       style="-fx-text-fill:white; -fx-font-weight:bold; -fx-font-size:16px;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="15" style="-fx-padding:15px;">
+
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="All Tasks"
+                       style="-fx-font-weight:bold; -fx-font-size:14px;"/>
+                <ListView fx:id="taskListView" VBox.vgrow="ALWAYS" prefHeight="560"/>
+            </VBox>
+
+            <VBox prefWidth="550">
+                <TabPane>
+
+                    <Tab text="Add Task" closable="false">
+                        <VBox spacing="12" style="-fx-padding:20px;">
+                            <Label text="Title *"/>
+                            <TextField fx:id="titleField" promptText="Enter title"/>
+                            <Label text="Status *"/>
+                            <ComboBox fx:id="statusCombo" prefWidth="10000"
+                                      promptText="open / closed"/>
+                            <Label text="Added By *"/>
+                            <TextField fx:id="addedByField" promptText="Your name"/>
+                            <Label text="Date * (YYYY-MM-DD)"/>
+                            <TextField fx:id="dateField" promptText="2024-05-20"/>
+                            <HBox spacing="10">
+                                <Button text="Add Task" onAction="#handleAddTask"
+                                        HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                                        style="-fx-background-color:#2E7D32; -fx-text-fill:white; -fx-font-weight:bold;"/>
+                                <Button text="Clear" onAction="#handleClear"
+                                        HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                            </HBox>
+                        </VBox>
+                    </Tab>
+
+                    <Tab text="Analyze" closable="false">
+                        <VBox spacing="10" style="-fx-padding:20px;">
+                            <Button text="Tasks by Ali (sorted by ID)"
+                                    maxWidth="Infinity" onAction="#handleTasksByAli"/>
+                            <Button text="Earliest 4 Tasks"
+                                    maxWidth="Infinity" onAction="#handleEarliest4"/>
+                            <Button text="Titles: start A + 7 letters"
+                                    maxWidth="Infinity" onAction="#handleASevenLetters"/>
+                            <Button text="Most Active Contributor"
+                                    maxWidth="Infinity" onAction="#handleMostActive"/>
+                            <Button text="Count Open and Closed"
+                                    maxWidth="Infinity" onAction="#handleCountStatus"/>
+                            <Button text="Count Tasks by Sami"
+                                    maxWidth="Infinity" onAction="#handleTasksBySami"/>
+                            <Separator/>
+                            <Label text="Results:"/>
+                            <TextArea fx:id="resultArea" prefHeight="200"
+                                      editable="false" wrapText="true"/>
+                        </VBox>
+                    </Tab>
+
+                </TabPane>
+            </VBox>
+
+        </HBox>
+    </center>
+</BorderPane>

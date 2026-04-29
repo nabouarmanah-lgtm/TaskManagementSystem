@@ -1,0 +1,44 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #E8EAF6;
+}
+
+.list-cell:selected {
+    -fx-background-color: #E8EAF6;
+    -fx-text-fill: #1A237E;
+}
+
+.list-cell:hover {
+    -fx-background-color: #F0F4F8;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+}
+
+.tab .tab-label {
+    -fx-font-weight: bold;
+}
+
+.text-area {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: "Courier New";
+    -fx-font-size: 12px;
+}
+
+.button {
+    -fx-background-color: #E8EAF6;
+    -fx-text-fill: #1A237E;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #C5CAE9;
+}

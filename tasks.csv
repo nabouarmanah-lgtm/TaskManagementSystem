@@ -1,0 +1,13 @@
+id,title,status,addedBy,creationDate
+1,Analysis Report,open,Ali,2024-01-05
+2,Design Database,closed,Sami,2024-01-10
+3,Approve Budget,open,Ali,2024-01-15
+4,Backend Setup,closed,Nada,2024-02-01
+5,Review Code,open,Sami,2024-02-10
+6,Testing Phase,open,Ali,2024-02-15
+7,Artwork Design,closed,Niven,2024-03-01
+8,Deploy Server,open,Sami,2024-03-05
+9,Update Docs,closed,AbdulRahman,2024-03-10
+10,Archive Files,open,Ali,2024-03-20
+11,Build Pipeline,closed,Nana,2024-04-01
+12,Client Meeting,open,Heba,2024-04-10
