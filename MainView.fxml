@@ -43,7 +43,7 @@
                             <Label text="Added By *"/>
                             <TextField fx:id="addedByField" promptText="Your name"/>
                             <Label text="Date * (YYYY-MM-DD)"/>
-                            <TextField fx:id="dateField" promptText="2024-05-20"/>
+                            <TextField fx:id="dateField" promptText="2026-05-20"/>
                             <HBox spacing="10">
                                 <Button text="Add Task" onAction="#handleAddTask"
                                         HBox.hgrow="ALWAYS" maxWidth="Infinity"
